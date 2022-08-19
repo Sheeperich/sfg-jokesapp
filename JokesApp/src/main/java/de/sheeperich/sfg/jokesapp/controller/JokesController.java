@@ -1,5 +1,6 @@
 package de.sheeperich.sfg.jokesapp.controller;
 
+import de.sheeperich.sfg.jokesapp.services.JokeService;
 import de.sheeperich.sfg.jokesapp.services.JokeServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JokesController {
 
-    private final JokeServiceImpl jokeServiceImpl;
+    private final JokeService jokeServiceImpl;
 
-    public JokesController() {
-        this.jokeServiceImpl = new JokeServiceImpl();
+    public JokesController( JokeService jokeService) {
+        this.jokeServiceImpl = jokeService;
     }
 
 
