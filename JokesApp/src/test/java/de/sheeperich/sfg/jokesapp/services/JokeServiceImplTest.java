@@ -2,14 +2,12 @@ package de.sheeperich.sfg.jokesapp.services;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class ChuckNorrisQuoteServiceTest {
+class JokeServiceImplTest {
 
     @Test
     void getRandomJoke() {
 
-        ChuckNorrisQuoteService cnqs = new ChuckNorrisQuoteService();
+        JokeServiceImpl cnqs = new JokeServiceImpl();
         System.out.println(cnqs.getRandomJoke());
 
     }

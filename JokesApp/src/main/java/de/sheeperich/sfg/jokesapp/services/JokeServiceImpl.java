@@ -1,17 +1,19 @@
 package de.sheeperich.sfg.jokesapp.services;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
+import org.springframework.stereotype.Service;
 
-public class ChuckNorrisQuoteService {
+@Service
+public class JokeServiceImpl implements JokeService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
 
-    public ChuckNorrisQuoteService() {
+    public JokeServiceImpl() {
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
-
+    @Override
     public String getRandomJoke(){
-        return this.chuckNorrisQuotes.getRandomQuote();
+        return chuckNorrisQuotes.getRandomQuote();
     }
 }
